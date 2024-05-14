@@ -45,6 +45,7 @@ h1 {
   text-indent: 5px;
   margin-left: 5px;
   letter-spacing: 1px;
+  outline: none;
 }
 
 .plusList {
@@ -73,8 +74,8 @@ h1 {
 
 .delete,
 .toggleButton {
-  width: 134px;
-  height: 40px;
+  width: 45%;
+  height: 70%;
   margin-top: 25px;
   font-size: 16px;
   border: 2px solid #182963;

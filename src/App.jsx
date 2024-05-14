@@ -27,6 +27,11 @@ function App() {
   const [contents, setContents] = useState("");
 
   const addList = () => {
+    if (title == "" || contents == "") {
+      alert("빈칸을 입력해주세요!");
+      return;
+    }
+
     const newList = {
       id: new Date().getTime(),
       title: title,
@@ -35,6 +40,8 @@ function App() {
     };
 
     setTodaylist([...todaylist, newList]);
+    setTitle("");
+    setContents("");
   };
 
   const deleteList = (id) => {
