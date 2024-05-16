@@ -1,23 +1,4 @@
-#wrap {
-  width: 1000px;
-  margin: 0 auto;
-  border: 1px solid red;
-}
-
-#title,
-#navi {
-  display: flex;
-  justify-content: center;
-}
-
-#topWrap {
-  width: 300px;
-  height: 200px;
-  border: 2px solid green;
-}
-
-#bottomWrap {
-  width: 300px;
-  height: 200px;
-  border: 2px solid blue;
+h3 {
+  margin: 0;
+  padding: 0;
 }
