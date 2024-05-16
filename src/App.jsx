@@ -53,11 +53,6 @@ function App() {
 
   const toggleIsDone = (id) => {
     const newTodaylist = todaylist.map((list) =>
-      // if(list.id === id) {
-      //   list.isDone= !list.isDone
-      // }
-      // return {...list}
-
       list.id === id ? { ...list, isDone: !list.isDone } : list
     );
     setTodaylist(newTodaylist);
