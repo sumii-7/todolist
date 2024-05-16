@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "open": "open http://localhost:5173",
-    "dev:open": "concurrently 'vite' 'sleep 2 && open http://localhost:5173'"
+    "dev:open": "concurrently 'vite' 'sleep 1 && open http://localhost:5173'"
   },
   "dependencies": {
     "concurrently": "^8.2.2",

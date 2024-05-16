@@ -91,3 +91,8 @@ h1 {
 .delete {
   margin-right: 10px;
 }
+
+.box {
+  overflow-x: auto;
+  display: grid;
+}

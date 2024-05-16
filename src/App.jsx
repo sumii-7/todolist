@@ -94,35 +94,39 @@ function App() {
 
       <section id="contentWrap">
         <h2>Working..🔥</h2>
-        <div style={contentGap}>
-          {todaylist
-            .filter((todaylist) => !todaylist.isDone)
-            .map(function (list) {
-              return (
-                <List
-                  key={list.id}
-                  list={list}
-                  deleteList={deleteList}
-                  toggleIsDone={toggleIsDone}
-                />
-              );
-            })}
+        <div className="box">
+          <div style={contentGap}>
+            {todaylist
+              .filter((todaylist) => !todaylist.isDone)
+              .map(function (list) {
+                return (
+                  <List
+                    key={list.id}
+                    list={list}
+                    deleteList={deleteList}
+                    toggleIsDone={toggleIsDone}
+                  />
+                );
+              })}
+          </div>
         </div>
 
         <h2>Done..🤩</h2>
-        <div style={contentGap}>
-          {todaylist
-            .filter((todaylist) => todaylist.isDone)
-            .map(function (list) {
-              return (
-                <List
-                  key={list.id}
-                  list={list}
-                  deleteList={deleteList}
-                  toggleIsDone={toggleIsDone}
-                />
-              );
-            })}
+        <div className="box">
+          <div style={contentGap}>
+            {todaylist
+              .filter((todaylist) => todaylist.isDone)
+              .map(function (list) {
+                return (
+                  <List
+                    key={list.id}
+                    list={list}
+                    deleteList={deleteList}
+                    toggleIsDone={toggleIsDone}
+                  />
+                );
+              })}
+          </div>
         </div>
       </section>
     </div>
