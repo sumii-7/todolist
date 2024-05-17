@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  const contentGap = {
-    display: "flex",
-    gap: "12px",
-  };
-
   const [todaylist, setTodaylist] = useState([
     {
       id: new Date().getTime(),
@@ -99,7 +94,7 @@ function App() {
           deleteList={deleteList}
           toggleIsDone={toggleIsDone}
         >
-          working...🔥
+          Working...🔥
         </Todolist>
 
         <Todolist
