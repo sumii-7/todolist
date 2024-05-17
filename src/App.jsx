@@ -93,41 +93,23 @@ function App() {
       </div>
 
       <section id="contentWrap">
-        <h2>Working..🔥</h2>
-        <div className="box">
-          <div style={contentGap}>
-            {todaylist
-              .filter((todaylist) => !todaylist.isDone)
-              .map(function (list) {
-                return (
-                  <List
-                    key={list.id}
-                    list={list}
-                    deleteList={deleteList}
-                    toggleIsDone={toggleIsDone}
-                  />
-                );
-              })}
-          </div>
-        </div>
+        <Todolist
+          isDone={false}
+          todaylist={todaylist}
+          deleteList={deleteList}
+          toggleIsDone={toggleIsDone}
+        >
+          working...🔥
+        </Todolist>
 
-        <h2>Done..🤩</h2>
-        <div className="box">
-          <div style={contentGap}>
-            {todaylist
-              .filter((todaylist) => todaylist.isDone)
-              .map(function (list) {
-                return (
-                  <List
-                    key={list.id}
-                    list={list}
-                    deleteList={deleteList}
-                    toggleIsDone={toggleIsDone}
-                  />
-                );
-              })}
-          </div>
-        </div>
+        <Todolist
+          isDone={true}
+          todaylist={todaylist}
+          deleteList={deleteList}
+          toggleIsDone={toggleIsDone}
+        >
+          Done...🤩
+        </Todolist>
       </section>
     </div>
   );
@@ -162,5 +144,40 @@ const List = ({ list, deleteList, toggleIsDone }) => {
         </button>
       </div>
     </div>
+  );
+};
+
+const Todolist = ({
+  todaylist,
+  deleteList,
+  toggleIsDone,
+  isDone,
+  children,
+}) => {
+  const contentGap = {
+    display: "flex",
+    gap: "12px",
+  };
+
+  return (
+    <>
+      <h2>{children}</h2>
+      <div className="box">
+        <div style={contentGap}>
+          {todaylist
+            .filter((todaylist) => todaylist.isDone === isDone)
+            .map(function (list) {
+              return (
+                <List
+                  key={list.id}
+                  list={list}
+                  deleteList={deleteList}
+                  toggleIsDone={toggleIsDone}
+                />
+              );
+            })}
+        </div>
+      </div>
+    </>
   );
 };
